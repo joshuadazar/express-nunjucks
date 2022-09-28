@@ -1,3 +1,1 @@
-const data = require('../data/data.json');
-
-const BaseTemplate = require('../views/home.njk')
+export default functiondata = require('../data/data.json');

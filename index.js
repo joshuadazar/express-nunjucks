@@ -1,9 +1,9 @@
 const express = require('express');
 const nunjucks = require('nunjucks');
-const data = require('./controller/index');
+const data = require('./data/data.json');
 
 let app = express();
-app.set('view engine', 'html');
+app.set('view engine', 'njk');
 
 nunjucks.configure('views', {
     autoescape: true,
@@ -12,10 +12,10 @@ nunjucks.configure('views', {
 
 
 app.get('/', (req, res) => {
-    res.render('home.html', {})
+    res.render('home', {data})
 })
-
+app.use(express.static(__dirname + '/views'));
 app.listen(8000, () => {
-  console.log('server in localhost in port 8000', data);
+  console.log('server in localhost in port 8000');
 
 });
