@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% set title = 'Home' %}
+
+{% block content %}
+<h1>{{data.menu.header}}</h1>
+<button id="click">click me and check events</button>
+<ul>
+  {% for item in data.menu.items %}
+  <li>
+    {{item.id}}
+    {% if item.label %}
+    <button type="button">{{item.label}}</button>
+    {% endif %}
+  </li>
+  {% endfor %}
+</ul>
+<section class="color">
+  <div class="container">
+    <h1 class="color__title">Random Colors</h1>
+    <div class="color__list">
+
+    </div>
+  </div>
+
+</section>
+{% endblock %}

@@ -1,1 +1,3 @@
-export default functiondata = require('../data/data.json');
+const functiondata = require('../data/data.json');
+
+console.log('that`s all folks ???');
